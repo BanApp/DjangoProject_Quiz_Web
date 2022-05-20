@@ -1,0 +1,32 @@
+
+<h1>하단의 문제를 읽고 정답을 1가지 고르시오.</h1>
+<h2 style="font-size: 40px">문제{{quiz.id}}: {{quiz.question}}</h2>
+<div class="radio-group">
+    <form action="" method="POST" class="quiz_form">
+        {% csrf_token %}
+        <input type="hidden" name="quiz_id" value="{{quiz.id}}">
+        <input type="hidden" name="answer" value="1">
+        <input type="submit" class="options" value="{{quiz.option1}}" style=width:600px;height:50px;font-size:30px;background-color:darkblue;color:white>
+    </form>
+
+    <form action="" method="POST" class="quiz_form">
+        {% csrf_token %}
+        <input type="hidden" name="quiz_id" value="{{quiz.id}}">
+        <input type="hidden" name="answer" value="2">
+        <input type="submit" class="options" value="{{quiz.option2}}" style=width:600px;height:50px;font-size:30px;background-color:darkblue;color:white>
+    </form>
+
+    <form action="" method="POST" class="quiz_form">
+        {% csrf_token %}
+        <input type="hidden" name="quiz_id" value="{{quiz.id}}">
+        <input type="hidden" name="answer" value="3">
+        <input type="submit" class="options" value="{{quiz.option3}}" style=width:600px;height:50px;font-size:30px;background-color:darkblue;color:white>
+    </form>
+
+    <form action="" method="POST" class="quiz_form">
+        {% csrf_token %}
+        <input type="hidden" name="quiz_id" value="{{quiz.id}}">
+        <input type="hidden" name="answer" value="4">
+        <input type="submit" class="options" value="{{quiz.option4}}" style=width:600px;height:50px;font-size:30px;background-color:darkblue;color:white>
+    </form>
+</div>

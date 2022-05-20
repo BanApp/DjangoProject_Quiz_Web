@@ -1,0 +1,51 @@
+<h1>시험이 끝났습니다!</h1>
+{% if user.score >= 0 %}
+    <h2>*************************</h2>
+<h2 id = "average_score">응시자 평균 : {{average_score}}점</h2>
+<h2>{{user.name}} 학생의 점수: {{ user.score }}점</h2>
+<h2>*************************</h2>
+    <h1> </h1>
+    <h1> </h1>
+    {% if user.score >= average_score %}
+        <h2>축하합니다!</h2>
+        <h2>평균 이상 입니다!</h2>
+    {% elif user.score < average_score %}
+        <h2>아쉽습니다!</h2>
+        <h2>평균 이하 입니다. 조금만 더 노력해 봅시다.</h2>
+
+    {% endif %}
+
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <style>
+        /* UI Object 가로 */
+        .h_graph ul{margin:0 50px 0 50px;padding:1px 0 0 0;border:1px solid #ddd;border-top:0;border-right:0;font-size:12px;font-family:Tahoma, Geneva, sans-serif;list-style:none}
+        .h_graph li{position:relative;margin:10px 0;vertical-align:top;white-space:nowrap}
+        .h_graph .g_term{position:absolute;top:0;left:-50px;width:40px;font-weight:bold;color:#767676;line-height:20px;text-align:center}
+        .h_graph .g_bar{display:inline-block;position:relative;height:40px;border:1px solid #ccc;border-left:0;background:#e9e9e9}
+        .h_graph .g_bar span{position:absolute;top:0;right:-50px;width:40px;color:#767676;line-height:20px}
+    </style>
+</head>
+
+ <body>
+    <div class="h_graph">
+        <ul>
+            <li><span class="g_term">평균 점수</span><span class="g_bar" style="width:{{average_score}}0%; background: yellow"><span>{{average_score}}점</span></span></li>
+            <li><span class="g_term">나의 점수</span><span class="g_bar" style="width:{{ user.score }}0%; background: red"><span>{{ user.score }}점</span></span></li>
+        </ul>
+    </div>
+ </body>
+</html>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+<form>
+<a href="http://127.0.0.1:8000">
+    <input type="button" value="첫화면 으로 돌아 가기" style=width:400px;height:50px;font-size:30px;background-color:darkblue;color:white>
+    </a>
+</form>
+{% endif %}
+
+

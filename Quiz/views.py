@@ -14,17 +14,17 @@ def home(request):
 
 def quiz(requset,pk):
     user = get_object_or_404(EndUser,pk=pk)
-    aans = get_object_or_404(Answer)
+    t_ans = get_object_or_404(Answer)
 
     num = 1
     if requset.POST:
         num = int(requset.POST['quiz_id']) + 1
         user.answer = user.answer + requset.POST['answer']
-        if requset.POST['answer'] == aans.ans[num-2]:
+        if requset.POST['answer'] == t_ans.ans[num-2]:
             user.score = user.score + 1
             user.save()
 
-        if num > len(aans.ans):
+        if num > len(t_ans.ans):
             return redirect("result",pk)
 
     quiz = get_object_or_404(Question, id=num)
@@ -39,12 +39,5 @@ def result(requset, pk):
         each_score = i.score
         scorelist.append(each_score)
     average_score = round(sum(scorelist)/len(all_user))
-    if len(user.answer) == 10:
-        while True:
-            try:
-                pass
-                break
-            except:
-                return requset(requset,'error.html')
 
     return render(requset,"result.html",{"user":user,'average_score':average_score})

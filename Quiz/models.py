@@ -1,7 +1,7 @@
 from django.db import models
 
 class Answer(models.Model):
-    ans = models.CharField(default="", max_length=10,null=True,blank=True)
+    ans = models.CharField(default="", max_length=100,null=True,blank=True)
 
 class Question(models.Model):
     question = models.CharField(max_length=100)

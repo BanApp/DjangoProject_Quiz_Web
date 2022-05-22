@@ -11,7 +11,7 @@
         <h2>평균 이상 입니다!</h2>
     {% elif user.score < average_score %}
         <h2>아쉽습니다!</h2>
-        <h2>평균 이하 입니다. 조금만 더 노력해 봅시다.</h2>
+        <h2>평균 미만 입니다. 조금만 더 노력해 봅시다.</h2>
 
     {% endif %}
 
@@ -20,7 +20,6 @@
  <head>
     <meta charset="UTF-8">
     <style>
-        /* UI Object 가로 */
         .h_graph ul{margin:0 50px 0 50px;padding:1px 0 0 0;border:1px solid #ddd;border-top:0;border-right:0;font-size:12px;font-family:Tahoma, Geneva, sans-serif;list-style:none}
         .h_graph li{position:relative;margin:10px 0;vertical-align:top;white-space:nowrap}
         .h_graph .g_term{position:absolute;top:0;left:-50px;width:40px;font-weight:bold;color:#767676;line-height:20px;text-align:center}
@@ -43,7 +42,7 @@
     <h1> </h1>
 <form>
 <a href="http://127.0.0.1:8000">
-    <input type="button" value="첫화면 으로 돌아 가기" style=width:400px;height:50px;font-size:30px;background-color:darkblue;color:white>
+    <input type="button" value="첫 화면으로 돌아가기" style=width:400px;height:50px;font-size:30px;background-color:darkblue;color:white>
     </a>
 </form>
 {% endif %}

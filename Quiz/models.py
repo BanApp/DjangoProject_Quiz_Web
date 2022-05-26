@@ -1,4 +1,5 @@
 from django.db import models
+from django.db import connections
 
 class Answer(models.Model):
     ans = models.CharField(default="", max_length=100,null=True,blank=True)

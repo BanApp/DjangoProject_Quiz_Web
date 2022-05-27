@@ -46,3 +46,9 @@ Admin 기능을 통해 사용자, 문제, 정답 DB를 관리 할 수 있다.
 <img width="1920" alt="스크린샷 2022-05-27 오전 11 26 38" src="https://user-images.githubusercontent.com/93313445/170616468-1752d48c-8d1e-44b3-9de9-685eeb6375f8.png">
 
 # 4) 첫화면의 '문제출제' 버튼 클릭시 출력되는 화면이다. 문제와 보기를 적고 정답을 적고 제출하면 DB에 저장이 된다.
+
+<img width="1920" alt="스크린샷 2022-05-27 오전 11 37 10" src="https://user-images.githubusercontent.com/93313445/170617667-66d17edc-7dc0-4496-9f1e-ab2a14155aac.png">
+
+# 5) 관리자 기능을 통해서 Answer, Question, EndUser DB를 쉽게 수정 할 수 있다.
+
+

@@ -5,20 +5,17 @@ from django.core.paginator import Paginator
 def home(request):
     if request.GET:
         user = EndUser()
-        user.name = request.GET['name']
 
         if request.GET['name'] == "":
             user.name="익명"
             user.save()
             return redirect("quiz",user.pk)
 
-        elif request.GET['name'] != "" and request.GET['name'] != "addition":
+        elif request.GET['name'] != "":
             user.name = request.GET['name']
             user.save()
             return redirect("quiz", user.pk)
 
-        elif request.GET['name'] == "addition":
-            return redirect("add")
 
     return render(request,"home.html")
 

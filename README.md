@@ -10,7 +10,7 @@
 
   </tr>
   <tr>
-      <td align="center">👦🏻 정민준 (백엔드(Django), 프론트(HTML))</td>
+      <td align="center">👦🏻 @@@ (백엔드(Django), 프론트(HTML))</td>
   </tr>
 </table>
 <br/><br/>
